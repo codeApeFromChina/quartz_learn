@@ -1,8 +1,9 @@
 package com.xinghen.quartz.learn;
 
+import org.quartz.Job;
+import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
-import org.quartz.impl.StdScheduler;
 import org.quartz.impl.StdSchedulerFactory;
 
 /**
@@ -13,6 +14,9 @@ public class QuartzLearn {
         try {
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
             scheduler.start();
+            JobDetil jobDetail = new JobDetail();
+
+
             scheduler.shutdown();
         } catch (SchedulerException e) {
             e.printStackTrace();
